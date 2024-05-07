@@ -188,17 +188,8 @@ def main():
                     bombs[i] = None
                     bird.change_img(6, screen)
                     pg.display.update()
-        bombs = [bomb for bomb in bombs if bomb is not None]
-        """bombs = []
-        for bomb in bombs: #スコア表示
-            if bomb is not None:
-                bombs.append(bomb)
-            else:
-                score.score += 1
-                score.update(screen)"""
+        bombs = [bomb for bomb in bombs if bomb is not None]              
                 
-                
-
         key_lst = pg.key.get_pressed()
         bird.update(key_lst, screen)
         for bomb in bombs:
@@ -209,7 +200,6 @@ def main():
         pg.display.update()
         tmr += 1
         clock.tick(50)
-
 
 if __name__ == "__main__":
     pg.init()
